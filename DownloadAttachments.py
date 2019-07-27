@@ -4,9 +4,9 @@ import os
 import sys
 
 # Your IMAP Settings
-host = 'imap-mail.outlook.com'
-user = 'test@outlook.in'
-password = 'etertesdgdg'
+host = 'imap-mail.outlook.com' # Modify according to mail service provider for Gmail it's 'imap.gmail.com'
+user = 'test@outlook.in' # Replace "test@outlook.in" with your mail id
+password = 'etertesdgdg' #Replace "etertesdgdg" with your password
 
 # Connect to the server
 print('Connecting to ' + host)
@@ -19,7 +19,7 @@ boxList = mailBox.list()
 # print(boxList)
 
 mailBox.select()
-searchQuery = '(SUBJECT "Testing mail" from "sender@gmail.com" NOT SEEN)'
+searchQuery = '(SUBJECT "Testing mail" from "sender@gmail.com" NOT SEEN)' #Modify SUBJECT anf from arguments
 
 result, data = mailBox.uid('SEARCH', None, searchQuery,)
 ids = data[0]
